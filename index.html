@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+  
+
+    <h2  style ="background-color: rgb(245, 129, 152);">Vložení čísel do pole</h2>
+ 
+    <p>Zadejte čísla oddělená čárkou:</p>
+     
+    <input type="text" id="numberInput">
+    <button onclick="calculateAverage()">Spočítat průměr</button>
+     
+    <p id="result"></p>
+     
+    <script>
+    function calculateAverage() {
+      var numberInput = document.getElementById("numberInput").value;
+      var numbersArray = numberInput.split(",").map(Number);
+     
+      var sum = 0;
+      for (var i = 0; i < numbersArray.length; i++) {
+        sum += numbersArray[i];
+      }
+     
+      var average = sum / numbersArray.length;
+     
+      document.getElementById("result").innerHTML = "Průměr čísel v poli je: " + average;
+    }
+    </script>
+    má místní nabídku
+
+
+   <h2 style ="background-color: rgb(245, 129, 152)">Nejvyšší a Nejnižší</h2>
+ 
+<p>Zjistěte nejvyšší a nejnižší číslo v poli:</p>
+ 
+<input type="text" id="numberInput">
+<button onclick="findMinMax()">Najít nejvyšší a nejnižší číslo</button>
+ 
+<p id="result"></p>
+ 
+<script>
+function findMinMax() {
+  var numberInput = document.getElementById("numberInput").value;
+  var numbersArray = numberInput.split(",").map(Number);
+ 
+  var min = Math.min.apply(null, numbersArray);
+  var max = Math.max.apply(null, numbersArray);
+ 
+  document.getElementById("result").innerHTML = "Nejmenší číslo v poli je: " + min + "<br> Nejvyšší číslo v poli je: " + max;
+}
+</script>
+ 
+má místní nabídku
+Vytvořit
+
+
+<h2 style ="background-color: rgb(245, 129, 152);" >Změna velkých a malých písmen</h2>
+
+<script>
+
+let text = "Karel Novák";
+
+let velka = text.toUpperCase();
+console.log(velka); 
+
+let mala = text.toLowerCase();
+console.log(mala); 
+
+
+
+</script>
+</body>
+</html>
+
+</body>
+</html>
